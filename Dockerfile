@@ -8,5 +8,8 @@ COPY . /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Comando de inicio (este es clave)
+# Puerto expuesto
+EXPOSE 5005
+
+# Comando de inicio
 CMD ["rasa", "run", "--enable-api", "--cors", "*"]
